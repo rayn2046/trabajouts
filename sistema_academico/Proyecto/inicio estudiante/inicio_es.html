@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Personal del Estudiante</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="icon" type="image/png" href="img/1.png">
+    <script>
+        function toggleNotas() {
+            const notasSection = document.getElementById('notas-section');
+            notasSection.style.display = notasSection.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <section id="banner">
+        <img src="img/baner.jpg" alt="Banner del Panel del Profesor">
+    </section>>
+    <header>
+        <h1>Área Personal del Estudiante</h1>
+    </header>
+    <nav>
+        <a href="javascript:void(0)" onclick="toggleNotas()">Notas</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#chatear">Chat</a>
+        <a href="#subir-trabajos">Subir Trabajos</a>
+    </nav>
+    <section id="notas-section" style="display: none;">
+        <h2>Notas</h2>
+        <div class="card">
+            <p>Curso: Inglés II</p>
+            <p>Progreso: 0% completado</p>
+            <div class="progress-bar">
+                <div style="width: 0%;"></div>
+            </div>
+        </div>
+        <div class="card">
+            <p>Curso: Electromagnetismo</p>
+            <p>Progreso: 12% completado</p>
+            <div class="progress-bar">
+                <div style="width: 12%;"></div>
+            </div>
+        </div>
+        <div class="card">
+            <p>Curso: Metodología de la Investigación</p>
+            <p>Progreso: 4% completado</p>
+            <div class="progress-bar">
+                <div style="width: 4%;"></div>
+            </div>
+        </div>
+    </section>
+    <section id="noticias">
+        <h2>Noticias</h2>
+        <div class="card">
+            <p>¡Bienvenido a la nueva plataforma!</p>
+        </div>
+    </section>
+    <section id="chatear">
+        <h2>Chat</h2>
+        <div class="card">
+            <textarea rows="4" placeholder="Escribe tu mensaje..."></textarea>
+            <button>Enviar</button>
+        </div>
+    </section>
+    <section id="subir-trabajos">
+        <h2>Subir Trabajos</h2>
+        <div class="card">
+            <input type="file">
+            <button>Subir</button>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Universidad Tecnológica</p>
+    </footer>
+</body>
+</html>

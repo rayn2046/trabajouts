@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Profesor</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <!-- Banner fijo -->
+    <section id="banner">
+        <img src="img/baner.jpg" alt="Banner del Panel del Profesor">
+    </section>>
+             
+    <header>
+        <h1>Panel del Profesor</h1>
+    </header>
+
+    <nav>
+        <a href="javascript:void(0)" onclick="toggleNotas()">Subir Notas</a>
+        <a href="javascript:void(0)" onclick="toggleTrabajos()">Asignar Trabajos</a>
+    </nav>
+
+    <!-- Sección para subir notas -->
+    <section id="notas-section" style="display: none;">
+        <h2>Subir Notas</h2>
+        <div class="card">
+            <form>
+                <label for="curso">Seleccionar Curso:</label>
+                <select id="curso">
+                    <option value="ingles">Inglés II</option>
+                    <option value="electromagnetismo">Electromagnetismo</option>
+                    <option value="metodologia">Metodología de la Investigación</option>
+                </select>
+
+                <label for="estudiante">Seleccionar Estudiante:</label>
+                <select id="estudiante">
+                    <option value="1">Estudiante 1</option>
+                    <option value="2">Estudiante 2</option>
+                    <option value="3">Estudiante 3</option>
+                </select>
+
+                <label for="nota">Nota:</label>
+                <input type="number" id="nota" min="0" max="100" placeholder="Ingrese la nota">
+
+                <button type="submit">Guardar Nota</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección para asignar trabajos -->
+    <section id="trabajos-section" style="display: none;">
+        <h2>Asignar Trabajos</h2>
+        <div class="card">
+            <form>
+                <label for="grupo">Seleccionar Grupo:</label>
+                <select id="grupo">
+                    <option value="grupo1">Grupo 1</option>
+                    <option value="grupo2">Grupo 2</option>
+                    <option value="grupo3">Grupo 3</option>
+                </select>
+
+                <label for="descripcion">Descripción del Trabajo:</label>
+                <textarea id="descripcion" rows="4" placeholder="Describe el trabajo asignado..."></textarea>
+
+                <label for="fecha">Fecha de Entrega:</label>
+                <input type="date" id="fecha">
+
+                <button type="submit">Asignar Trabajo</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Universidad Tecnológica</p>
+    </footer>
+
+    <script>
+        // Función para mostrar u ocultar las secciones
+        function toggleNotas() {
+            const notasSection = document.getElementById('notas-section');
+            notasSection.style.display = notasSection.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleTrabajos() {
+            const trabajosSection = document.getElementById('trabajos-section');
+            trabajosSection.style.display = trabajosSection.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
